@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de pares y nones</title>
+    <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="pasopantallas.css">
+</head>
+
+<body>
+    <div class='container'>
+        <div id ='marcador'>
+           <div> 
+               <div > Jugador</div>
+            <div id='puntjug'> Puntos jugador</div></div>
+            
+          <div> 
+              <div > Máquina</div>
+        <div id='puntmaq'> Puntos jugador</div>
+            </div>
+        </div>
+        <!--
+Vamos a hacer 5  pantallas,
+Pantalla 1 presentamos el juego
+Pantalla 2 Decimos al niño que elija pares nones
+Pantall 3 : lanzamos el juego
+Pantalla 4 :
+        informamos (lo que ha elegido el niño y lo que elige la maquina) 
+        resultados del juego (quien gana)
+        y volver a jugar (ir a pantalla 2) o abandonar juego
+Pantalla 5:
+Despedida
+
+-->
+        <!-- Inicio de la pantalla 1-->
+        <div id='pantalla1' class='pantalla'>
+            <h1 id='titulo'>Pares y Nones</h1>
+            <h2>Juega y diviértete</h2>
+            <button type ='button'id='entrar'> ¡¡¡Vamos a jugar!!!</button>
+            <div id='capitan'></div>
+        </div>
+        <!-- Inicio de la pantalla 2   : la niña elige pares o nones y un numero
+y pasamos a la pantalla 4, tras un breve espacio por la tres
+-->
+        <div id='pantalla2' class='pantalla'>
+                     <form>
+<div id='paresynones'>
+<h2> Elige pares o nones</h2>
+ <input  id='pares' type='radio' value='pares' name='paresnones'>
+<label for='pares'> Pares</label>
+    <input id='impares' type='radio' value='impares' name='paresnones'><label for='impares'> Nones</label>
+
+            </div>
+           
+ <div id='numeros'> 
+ <h2> Elige un número del 1 al 10</h2> 
+<input id='rad1'type='radio' value='1' name='numeros'>
+<label for='rad1'> 1</label>
+     <input id='rad2'type='radio' value='2' name='numeros'>
+<label for='rad2'> 2</label>
+     <input id='rad3'type='radio' value='3' name='numeros'>
+<label for='rad3'> 3</label>
+     <input id='rad4'type='radio' value='4' name='numeros'>
+<label for='rad4'> 4</label>
+     <input id='rad5'type='radio' value='5' name='numeros'>
+<label for='rad5'> 5</label>
+     <input id='rad6'type='radio' value='6' name='numeros'>
+<label for='rad6'> 6</label>
+     <input id='rad7'type='radio' value='7' name='numeros'>
+<label for='rad7'> 7</label>
+     <input id='rad8'type='radio' value='8' name='numeros'>
+<label for='rad8'> 8</label>
+     <input id='rad9'type='radio' value='9' name='numeros'>
+<label for='rad9'> 9</label>
+     <input id='rad10'type='radio' value='10' name='numeros'>
+<label for='rad10'> 10</label>
+    
+ 
+         </div>
+                         
+    <button onclick='jugar()' type='button' id='comjuego'> Juega contra la máquina</button>
+            </form>
+        </div>
+        <!-- Inicio de la pantalla 3-->
+        <div id='pantalla3' class='pantalla'>
+            <p> Estamos pensando</p>
+        
+        </div>
+        <!-- Inicio de la pantalla 4:   vemos los resultados del juego y definimos ganador
+            invitamos a jugar otra vez o nos vamos-->
+        <div id='pantalla4' class='pantalla'>
+          <ul id='display'>
+            
+            
+            </ul>
+            <button id='volver' type='button'> ¿Otra partida?</button>
+            <button id='despedida'type='button'> Abandonar juego</button>
+        </div>
+        <!-- Inicio de la pantalla 5-->
+        <div id='pantalla5' class='pantalla'>
+        <h2> Gracias y hasta pronto</h2>
+             <div id='capitanoff'></div>
+            
+        </div>
+       
+        <p class='copy'>&copy; Patricia Balboa Johnson 2019</p>
+        <audio id='boom' src='ohhh.mp3'></audio>
+        <audio id='toc' src='misc224.mp3'></audio>
+        <audio id='boton' src='iphone-notificacion.mp3'></audio>
+        <audio id='aplausos' src='bravo-engine-starting.mp3'></audio>
+        <audio id='hola' src='homero-hola.mp3'></audio>
+        <audio id='adios' src='adios-adios.mp3'></audio>
+    
+    
+    </div>
+        <script src="puntuacion.js"></script>
+     <script src="tomardatos.js"></script>
+    <script src="script.js"></script>
+<script src="pasopantallas.js"></script>
+    
+</body>
+</html>

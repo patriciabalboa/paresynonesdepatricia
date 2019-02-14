@@ -1,1 +1,1 @@
-# paresynonesdepatricia
+# paresynones
